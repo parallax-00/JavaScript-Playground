@@ -25,6 +25,12 @@
     margin-top: 20px;
     color: rgb(241, 241, 241);
   }
+  #content{
+    font-size: 35px;
+    margin-left: 90px;
+    margin-top: 20px;
+    color: rgb(241, 241, 241);
+  }
   
   
   h1 {
@@ -58,3 +64,13 @@
     box-shadow: 2px 2px black;
   }
   
+  #height{
+    border-radius: 10px;
+  }
+  #weight{
+    border-radius: 10px;
+  }
+  #height_label,#weight_label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+  }
