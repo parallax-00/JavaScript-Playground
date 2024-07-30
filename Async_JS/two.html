@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async JS</title>
+  </head>
+  <body style="background-color: #212121">
+    <h1
+      style="
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        font-size: xxx-large;
+      "
+    >
+      Parallax
+    </h1>
+    <p style="color: aliceblue;">Pressing the Start button will console.log the time and keeps on printing till Stop is pressed
+      and after that when again Start is pressed, the printing of time resumes.
+    </p>
+    <button id="Stop" style="margin: 30px; padding: 10px 20px">Stop</button>
+    <button id="Start" style="margin: 30px; padding: 10px 20px">Start</button>
+    <script>
+      
+      let validVariable;
+    const sayDate=()=>{
+      const date = new Date()
+      console.log(`Hello Saransh Bhawsar ${date.toLocaleTimeString()}`);
+    }
+    document.querySelector('#Start').addEventListener('click',function(){
+      validVariable =setInterval(sayDate, 1000);
+    },false)
+      document.querySelector('#Stop').addEventListener('click',function(){
+     clearInterval(validVariable)
+      },false)
+
+    </script>
+  </body>
+</html>

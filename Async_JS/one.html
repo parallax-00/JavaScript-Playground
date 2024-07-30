@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Javascript</title>
+  </head>
+  <body style="background-color: #212121">
+    <p style="color: aliceblue;">Heading will change from 'Parallax' to 'Saransh Bhawsar'
+         in 3 seconds and can be stopped by pressing on the 'Stop' button. Functionality of setTimeout and clearTimeout.</p>
+    <h1
+      style="
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        font-size: xxx-large;
+      "
+    >
+      Parallax_00
+    </h1>
+    <button style="margin: 30px; padding: 10px 20px">Stop</button>
+    <script>
+      const changeHead = () => {
+        document.querySelector("h1").innerHTML = "Saransh Bhawsar";
+      };
+      const change = setTimeout(changeHead, 3000);
+      document.querySelector("button").addEventListener("click", function () {
+        console.log("Parallax remains");
+        clearTimeout(change);
+      });
+    </script>
+  </body>
+</html>
